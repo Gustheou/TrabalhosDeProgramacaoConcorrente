@@ -1,0 +1,16 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class ControleProfessoresDisciplina20201 {
+
+/* ***************************************************************
+* Metodo: voltarButton
+* Funcao: Retornar para o menu do semestre 2020.1
+* Parametros: event = Botao que ao pressionado, desencadeara a funcao
+* Retorno: void
+*************************************************************** */
+  @FXML
+  void voltarButton(ActionEvent event) {
+    Principal.changeScreenSemestre20201();
+  }
+}
