@@ -2,11 +2,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class ControleMenu {
-
-    @FXML
-    void iniciarButton(ActionEvent event) {
-       Principal.changeScreenArvoreGenealogica(event);
-    }
-
-}
+/* ***************************************************************
+* Metodo: iniciarButton
+* Funcao: trocar a tela inicial para a segunda tela
+* Parametros: ActionEvent event = evento que requer uma acao para ser executado, que no caso eh um botao
+* Retorno: void
+*************************************************************** */
+  @FXML
+  void iniciarButton(ActionEvent event) {
+    Principal.changeScreenArvoreGenealogica(event);
+  }//Fim do metodo iniciarButton
+}//Fim da classe ControleMenu
 

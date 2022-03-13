@@ -136,8 +136,14 @@ public class ControleArvoreGenealogica {
   @FXML
   public ImageView imagemFilho1Idoso;
 
+/* ***************************************************************
+* Metodo: buttonIniciar
+* Funcao: Faz com que a arvore genealogica entre em acao, ou seja, faz o funcionamento do programa
+* Parametros: ActionEvent event = evento que requer uma acao para ser executado, que no caso eh um botao
+* Retorno: void
+*************************************************************** */
   @FXML
-  void buttonIniciar(ActionEvent event) throws InterruptedException {
+  void buttonIniciar(ActionEvent event) throws InterruptedException {//InterruptedException funciona quando a thread eh interrompida, fazendo com que a thread entre no estado de terminado/finalizado.
     buttonIniciar.setVisible(false);
    
     ProcessoNasceOPai pNP = new ProcessoNasceOPai();
@@ -156,34 +162,34 @@ public class ControleArvoreGenealogica {
     ProcessoPaiMorre pPM = new ProcessoPaiMorre();
     
     
-    FadeTransition ft = new FadeTransition(Duration.millis(800), imageArvore);
+    FadeTransition ft = new FadeTransition(Duration.millis(800), imageArvore);//A classe FadeTransition serve para realizar uma transicao basicamente atraves da mudanca de opacidade de um valor para tal, nessa transicao foi aplicado de 0 (sem opacidade) para 1 (100% de opacidade), ela pega um intervalo de tempo que voce define em milisegundos para aplicar isso e uma imagem/objeto que almeja aplicar a transicao. 
     imageArvore.setVisible(true);
     ft.setFromValue(0.0);
     ft.setToValue(1.0);
     ft.play();
 
-    pNP.start();
-    pNPF.start();
-    pNSF.start();
-    pNTF.start();
-    pPAPF.start();
-    pPASF.start();
-    pPBPF.start();
-    pPFM.start();
-    pSFM.start();
-    pTFM.start();
-    pPNM.start();
-    pSNF.start();
-    pBNF.start();
-    pPM.start();
-  }
+    pNP.start();//Comeco do processo de nascer o pai
+    pNPF.start();//Comeco do processo de nascer o primeiro filho
+    pNSF.start();//Comeco do processo de nascer o segundo filho
+    pPAPF.start();//Comeco do processo de nascer o filho do primeiro filho
+    pPASF.start();//Comeco do processo de nascer o filho do segundo filho
+    pNTF.start();//Comeco do processo de nascer o terceiro filho
+    pPBPF.start();//Comeco do processo de nascer o primeiro filho do primeiro filho do primeiro filho
+    pPFM.start();//Comeco do processo de morte do primeiro filho
+    pSFM.start();//Comeco do processo de morte do segundo filho
+    pTFM.start();//Comeco do processo de morte do terceiro filho
+    pPNM.start();//Comeco do processo de morte do primeiro filho do primeiro filho (ja falecido)
+    pSNF.start();//Comeco do processo de morte do primeiro filho do segundo filho (ja falecido)
+    pBNF.start();//Comeco do processo de morte do primeiro filho do primeiro filho (ja falecido) do primeiro filho (ja falecido)
+    pPM.start();//Comeco do processo de morte do pai
+  }//Fim do metodo buttonIniciar
 
   public class ProcessoNasceOPai extends Thread {
     public void run () {
       Timer temporizador = new Timer();
       long tempo = 0;
       temporizador.schedule(nasceOPai, tempo);
-    }
+    }//Fim do metodo run
     TimerTask nasceOPai = new TimerTask() {
       @Override
       public void run () {
@@ -196,9 +202,9 @@ public class ControleArvoreGenealogica {
         textFieldPai.setText("Nasce o pai");
 
         System.out.println("O pai nasce");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoNasceOPai
 
   public class ProcessoNasceOPrimeiroFilho extends Thread{
     @Override
@@ -206,8 +212,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 22*1000;
       temporizador.schedule(nasceOPrimeiroFilho,tempo);
-    }
-
+    }//Fim do metodo run
     TimerTask nasceOPrimeiroFilho = new TimerTask(){
       @Override
       public void run () {
@@ -225,9 +230,9 @@ public class ControleArvoreGenealogica {
       imagemFilho1Mirin.setVisible(true);
 
       System.out.println("O pai tem o primeiro filho aos 22 anos de idade");
-      } 
-    }; 
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoNasceOPrimeiroFilho
 
   public class ProcessoNasceOSegundoFilho extends Thread {
     @Override
@@ -235,8 +240,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 25*1000;
       temporizador.schedule(nasceOSegundoFilho,tempo);
-    }
-
+    }//Fim do metodo run
     TimerTask nasceOSegundoFilho = new TimerTask(){
       @Override
       public void run () {
@@ -245,9 +249,9 @@ public class ControleArvoreGenealogica {
         imagemFilho2Mirin.setVisible(true);
 
         System.out.println("O pai tem o segundo filho aos 25 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoNasceOSegundoFilho
 
   public class ProcessoNasceOTerceiroFilho extends Thread {
     @Override
@@ -255,8 +259,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 32*1000;
       temporizador.schedule(nasceOTerceiroFilho,tempo);
-    }
-
+    }//Fim do metodo run
     TimerTask nasceOTerceiroFilho = new TimerTask(){
       @Override
       public void run () {
@@ -271,9 +274,9 @@ public class ControleArvoreGenealogica {
         imagemFilho3Mirin.setVisible(true);
 
         System.out.println("O pai tem o terceiro filho aos 32 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoNasceOTerceiroFilho
 
   public class ProcessoPaiEhAvoDoPrimeiroFilho extends Thread {
     @Override
@@ -281,7 +284,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 38*1000;
       temporizador.schedule(paiEhAvoDoPrimeiroFilho, tempo);
-    }
+    }//Fim do metodo run
     TimerTask paiEhAvoDoPrimeiroFilho = new TimerTask() {
       @Override
       public void run () {
@@ -299,9 +302,9 @@ public class ControleArvoreGenealogica {
         imagemNeto1Mirin.setVisible(true);
 
         System.out.println("O pai eh avo (primeiro filho) aos 38 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoPaiEhAvoDoPrimeiroFilho
 
   public class ProcessoPaiEhAvoDoSegundoFilho extends Thread {
     @Override
@@ -309,7 +312,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 45*1000;
       temporizador.schedule(paiEhAvoDoSegundoFilho, tempo);
-    }
+    }//Fim do metodo run
     TimerTask paiEhAvoDoSegundoFilho = new TimerTask() {
       @Override
       public void run () {
@@ -324,9 +327,9 @@ public class ControleArvoreGenealogica {
         imagemNeto2Mirin.setVisible(true);
 
         System.out.println("O pai eh avo (segundo filho) aos 45 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoPaiEhAvoDoSegundoFilho
 
   public class ProcessoPaiEhBisavoDoPrimeiroFilho extends Thread{
     @Override
@@ -334,7 +337,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 68*1000;
       temporizador.schedule(paiEhBisavoDoPrimeiroFilho,tempo);
-    }
+    }//Fim do metodo run
     TimerTask paiEhBisavoDoPrimeiroFilho = new TimerTask() {
       @Override
       public void run () {
@@ -361,9 +364,9 @@ public class ControleArvoreGenealogica {
         textFieldBisneto1.setText("Bisneto 1 nasce");
 
         System.out.println("O pai eh bisavo (primeiro filho) aos 68 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe PaiEhBisavoDoPrimeiroFilho
 
   public class ProcessoPrimeiroFilhoMorre extends Thread {
     @Override
@@ -371,7 +374,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 83*1000;
       temporizador.schedule(primeiroFilhoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask primeiroFilhoMorre = new TimerTask() {
       @Override
       public void run () {
@@ -381,9 +384,9 @@ public class ControleArvoreGenealogica {
         textFieldFilho1.setVisible(true);
 
         System.out.println("O primeiro filho morre aos 61 anos de idade");
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoPrimeiroFilhoMorre
 
   public class ProcessoSegundoFilhoMorre extends Thread {
     @Override
@@ -391,7 +394,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 80*1000;
       temporizador.schedule(segundoFilhoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask segundoFilhoMorre = new TimerTask() {
       @Override
       public void run () {
@@ -401,10 +404,9 @@ public class ControleArvoreGenealogica {
         textFieldFilho2.setVisible(true);
 
         System.out.println("O segundo filho morre aos 55 anos de idade");
-        
-      }
-    };
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoSegundoFilhoMorre
 
   public class ProcessoTerceiroFilhoMorre extends Thread {
     @Override
@@ -412,7 +414,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 87*1000;
       temporizador.schedule(terceiroFilhoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask terceiroFilhoMorre = new TimerTask() {
       @Override
       public void run () {
@@ -431,10 +433,9 @@ public class ControleArvoreGenealogica {
         textFieldFilho3.setVisible(true);
 
         System.out.println("O terceiro filho morre aos 55 anos de idade");
-      }
-    };
-    
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoTerceiroFilhoMorre
 
   public class ProcessoPrimeiroNetoMorre extends Thread {
     @Override
@@ -442,7 +443,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 73*1000;
       temporizador.schedule(primeiroNetoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask primeiroNetoMorre = new TimerTask() {
       @Override
       public void run () {
@@ -476,10 +477,9 @@ public class ControleArvoreGenealogica {
         ft.play();
 
         System.out.println("O primeiro neto morre aos 35 anos de idade");
-      }
-    };
-    
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoPrimeiroNetoMorre
 
   public class ProcessoSegundoNetoMorre extends Thread {
     @Override
@@ -487,7 +487,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 78*1000;
       temporizador.schedule(segundoNetoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask segundoNetoMorre = new TimerTask (){
       @Override
       public void run () {
@@ -500,10 +500,9 @@ public class ControleArvoreGenealogica {
         textFieldNeto2.setVisible(true);
 
         System.out.println("O segundo neto morre aos 33 anos de idade");
-      }
-    };
-    
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoSegundoNetoMorre
 
   public class ProcessoBisnetoMorre extends Thread {
     @Override
@@ -511,7 +510,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 80*1000;
       temporizador.schedule(bisnetoMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask bisnetoMorre = new TimerTask() {
       @Override
       public void run () {
@@ -525,10 +524,9 @@ public class ControleArvoreGenealogica {
         textFieldBisneto1.setVisible(true);
         
         System.out.println("Bisneto morre aos 12 anos de idade");
-      }
-    };
-    
-  }
+      }//Fim do metodo run
+    };//Fim do TimerTask 
+  }//Fim da classe ProcessoBisnetoMorre
 
   public class ProcessoPaiMorre extends Thread {
     @Override
@@ -536,7 +534,7 @@ public class ControleArvoreGenealogica {
       Timer temporizador = new Timer();
       long tempo = 90*1000;
       temporizador.schedule(paiMorre, tempo);
-    }
+    }//Fim do metodo run
     TimerTask paiMorre = new TimerTask() {
       @Override
       public void run () {
@@ -547,7 +545,7 @@ public class ControleArvoreGenealogica {
 
         System.out.println("Pai morre aos 90 anos de idade");
         System.out.println("\nFim\n");
-      }
-    };
-  }
-}
+      }//Fim do metodo run
+    };//Fim do TimerTask
+  }//Fim da classe ProcessoPaiMorre
+}//Fim da classe ControleArvoreGenealogica

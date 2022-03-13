@@ -186,7 +186,7 @@
             <TextField fx:id="textFieldNeto1" alignment="CENTER" editable="false" focusTraversable="false" layoutX="31.0" layoutY="242.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
             <TextField fx:id="textFieldBisneto1" alignment="CENTER" editable="false" focusTraversable="false" layoutX="31.0" layoutY="349.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
             <TextField fx:id="textFieldFilho3" alignment="CENTER" editable="false" focusTraversable="false" layoutX="464.0" layoutY="134.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
-            <TextField fx:id="textFieldFilho2" alignment="CENTER" editable="false" focusTraversable="false" layoutX="246.0" layoutY="188.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
+            <TextField fx:id="textFieldFilho2" editable="false" focusTraversable="false" layoutX="246.0" layoutY="188.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
             <TextField fx:id="textFieldNeto2" alignment="CENTER" editable="false" focusTraversable="false" layoutX="248.0" layoutY="288.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-radius: 20;" visible="false" />
             <Button fx:id="buttonIniciar" layoutX="481.0" layoutY="349.0" mnemonicParsing="false" onAction="#buttonIniciar" style="-fx-background-radius: 20;" text="Iniciar">
                <font>
