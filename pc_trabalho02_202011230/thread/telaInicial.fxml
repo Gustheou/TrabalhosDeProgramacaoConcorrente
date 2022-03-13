@@ -13,17 +13,17 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 300;">
                <image>
-                  <Image url="@Imagens/filhoMirin.png" />
+                  <Image url="@filhoMirin.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="418.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
                <image>
-                  <Image url="@Imagens/filhoJovem.png" />
+                  <Image url="@filhoJovem.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="12.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 305;">
                <image>
-                  <Image url="@Imagens/filhoAdulto.png" />
+                  <Image url="@filhoAdulto.png" />
                </image>
             </ImageView>
          </children>
@@ -32,7 +32,7 @@
          <children>
             <ImageView fitHeight="83.0" fitWidth="77.0" layoutX="153.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Imagens/Uesb.png" />
+                  <Image url="@Uesb.png" />
                </image>
             </ImageView>
             <Label layoutX="77.0" layoutY="107.0" text="Arvore genealogica">
@@ -47,7 +47,7 @@
             </Button>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="112.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Imagens/Arvore.png" />
+                  <Image url="@Arvore.png" />
                </image>
             </ImageView>
             <Label layoutX="98.0" layoutY="341.0" text="Discente: Gustavo Pereira Nunes" />
