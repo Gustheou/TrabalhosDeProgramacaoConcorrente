@@ -2,7 +2,7 @@
 * Autor............: Gustavo Pereira Nunes
 * Matricula........: 202011230
 * Inicio...........: 13/04/2022
-* Ultima alteracao.: 22/04/2022
+* Ultima alteracao.: 24/04/2022
 * Nome.............: Filosofo
 * Funcao...........: Controlar os estados do filosofo, manipulado imagens e tudo mais.
 *************************************************************** */
@@ -106,10 +106,10 @@ public class Filosofo extends Thread{
       pensando();//Quando o filosofo devolver os garfos, os filosofos vizinhos podem tentar pegar
       ControleGeral.filosofos[vizinhoEsquerda()].tentaPegarHashi();
       ControleGeral.filosofos[vizinhoDireita()].tentaPegarHashi();
-      System.out.println("O filosofo "+this.id+ " devolveu os garfos");
+      System.out.println("O filosofo "+this.id+ " devolveu os hashi's");
       ControleGeral.mutex.release();
     } catch (InterruptedException i) {
-      System.out.println("Erro no metodo devolverGarfos: "+ i.getMessage());
+      System.out.println("Erro no metodo devolveHashi: "+ i.getMessage());
     }//Fim do try-catch
   }
 
@@ -127,7 +127,7 @@ public class Filosofo extends Thread{
       ControleGeral.mutex.release();
       ControleGeral.semaforos[this.id].acquire();
     } catch (InterruptedException i) {
-      System.out.println("Erro no metodo pegaGarfo: "+ i.getMessage());
+      System.out.println("Erro no metodo pegaHashi: "+ i.getMessage());
     }//Fim do try-catch
   }//Fim do metodo pegaHashi
 

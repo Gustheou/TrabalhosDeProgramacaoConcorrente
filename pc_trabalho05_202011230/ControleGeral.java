@@ -2,7 +2,7 @@
 * Autor............: Gustavo Pereira Nunes
 * Matricula........: 202011230
 * Inicio...........: 13/04/2022
-* Ultima alteracao.: 22/04/2022
+* Ultima alteracao.: 24/04/2022
 * Nome.............: ControleGeral
 * Funcao...........: Controlar a thread, imagens, sliders...
 *************************************************************** */
@@ -412,7 +412,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruThinking0 = valorNovo.longValue()*1000;
           setVelocidadePensar(velocidadeUmaruThinking0, 0);
-          System.out.println("Velocidade pensante 0 alterada " + getVelocidadePensar(0));
+          System.out.println("Velocidade pensante 0 alterada para " + getVelocidadePensar(0) + "ms");
         }
       }
     );
@@ -422,7 +422,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruThinking1 = valorNovo.longValue()*1000;
           setVelocidadePensar(velocidadeUmaruThinking1, 1);
-          System.out.println("Velocidade pensante 1 alterada " + getVelocidadePensar(1));
+          System.out.println("Velocidade pensante 1 alterada para " + getVelocidadePensar(1) + "ms");
         }
       }
     );
@@ -432,7 +432,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruThinking2 = valorNovo.longValue()*1000;
           setVelocidadePensar(velocidadeUmaruThinking2, 2);
-          System.out.println("Velocidade pensante 2 alterada " + getVelocidadePensar(2));
+          System.out.println("Velocidade pensante 2 alterada para " + getVelocidadePensar(2) + "ms");
         }
       }
     );
@@ -442,7 +442,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruThinking3 = valorNovo.longValue()*1000;
           setVelocidadePensar(velocidadeUmaruThinking3, 3);
-          System.out.println("Velocidade pensante 3 alterada " + getVelocidadePensar(3));
+          System.out.println("Velocidade pensante 3 alterada para " + getVelocidadePensar(3) + "ms");
         }
       }
     );
@@ -452,7 +452,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruThinking4 = valorNovo.longValue()*1000;
           setVelocidadePensar(velocidadeUmaruThinking4, 4);
-          System.out.println("Velocidade pensante 4 alterada " + getVelocidadePensar(4));
+          System.out.println("Velocidade pensante 4 alterada para " + getVelocidadePensar(4) + "ms");
         }
       }
     );
@@ -464,7 +464,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruEating0= valorNovo.longValue()*1000;
           setVelocidadeComer(velocidadeUmaruEating0, 0);
-          System.out.println("Velocidade de comer 0 alterada " + getVelocidadeComer(0));
+          System.out.println("Velocidade de comer 0 alterada para " + getVelocidadeComer(0) + "ms");
         }
       }
     );
@@ -474,7 +474,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruEating1 = valorNovo.longValue()*1000;
           setVelocidadeComer(velocidadeUmaruEating1, 1);
-          System.out.println("Velocidade de comer 1 alterada " + getVelocidadeComer(1));
+          System.out.println("Velocidade de comer 1 alterada para " + getVelocidadeComer(1) + "ms");
         }
       }
     );
@@ -484,7 +484,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruEating2 = valorNovo.longValue()*1000;
           setVelocidadeComer(velocidadeUmaruEating2, 2);
-          System.out.println("Velocidade de comer 2 alterada " + getVelocidadeComer(2));
+          System.out.println("Velocidade de comer 2 alterada para " + getVelocidadeComer(2) + "ms");
         }
       }
     );
@@ -493,8 +493,8 @@ public class ControleGeral implements Initializable{
         @Override
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruEating3 = valorNovo.longValue()*1000;
-          setVelocidadePensar(velocidadeUmaruEating3, 3);
-          System.out.println("Velocidade de comer 3 alterada " + getVelocidadeComer(3));
+          setVelocidadeComer(velocidadeUmaruEating3, 3);
+          System.out.println("Velocidade de comer 3 alterada para " + getVelocidadeComer(3) + "ms");
         }
       }
     );
@@ -504,7 +504,7 @@ public class ControleGeral implements Initializable{
         public void changed (ObservableValue<? extends Number> ov, Number valorAntigo, Number valorNovo){
           velocidadeUmaruEating4 = valorNovo.longValue()*1000;
           setVelocidadeComer(velocidadeUmaruEating4, 4);
-          System.out.println("Velocidade de comer 4 alterada " + getVelocidadeComer(4));
+          System.out.println("Velocidade de comer 4 alterada para " + getVelocidadeComer(4) + "ms");
         }
       }
     );
