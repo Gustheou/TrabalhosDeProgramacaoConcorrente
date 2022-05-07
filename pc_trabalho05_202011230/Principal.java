@@ -38,6 +38,8 @@ public class Principal extends Application{
 *************************************************************** */
   @Override
   public void start (Stage cenario) throws IOException {
+    ControleGeral cG = new ControleGeral();
+    ControleMenu cM = new ControleMenu();
     stage = cenario;
     cenario.setTitle("Food wars");
     Parent fxmlTelaInicial = FXMLLoader.load(getClass().getResource("TelaInicial.fxml"));

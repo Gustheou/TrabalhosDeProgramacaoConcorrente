@@ -48,6 +48,18 @@ public class Principal extends Application {
   @Override
   public void start (Stage cenario) throws Exception {
     stage = cenario;
+    ControleHorario20201 cH20201 = new ControleHorario20201();
+    ControleHorario20202 cH20202 = new ControleHorario20202();
+    ControleHorario20211 cH20211 = new ControleHorario20211();
+    ControleMenu cM = new ControleMenu();
+    ControleNotasFinais20201 cNF20201 = new ControleNotasFinais20201();
+    ControleNotasFinais20202 cNF20202 = new ControleNotasFinais20202();
+    ControleProfessoresDisciplina20201 cPD20201 = new ControleProfessoresDisciplina20201();
+    ControleProfessoresDisciplina20202 cPD20202 = new ControleProfessoresDisciplina20202();
+    ControleProfessoresDisciplina20211 cPD20211 = new ControleProfessoresDisciplina20211();
+    ControleSemestre20201 cS20201 = new ControleSemestre20201();
+    ControleSemestre20202 cS20202 = new ControleSemestre20202();
+    ControleSemestre20211 cS20211 = new ControleSemestre20211();
     cenario.setTitle ("Portal aluno");//Para atribuir um titulo na barra superior do aplicativo.
     Parent fxmlMenu = FXMLLoader.load(getClass().getResource("Menu.fxml"));//Fazer com que o principal arquivo fxml seja no caso o menu.
     menu = new Scene (fxmlMenu); //Atribuir a cena principal a nova sena que e referente ao fxml principal.

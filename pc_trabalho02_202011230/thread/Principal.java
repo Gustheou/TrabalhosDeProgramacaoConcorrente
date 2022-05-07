@@ -39,6 +39,8 @@ public class Principal extends Application{
   @Override
   public void start (Stage cenario) throws IOException {
     stage = cenario;
+    ControleArvoreGenealogica cAG = new ControleArvoreGenealogica();
+    ControleMenu cM = new ControleMenu();
     cenario.setTitle("Arvore genealogica");
     Parent fxmlMenu = FXMLLoader.load(getClass().getResource("telaInicial.fxml"));
     telaMenu = new Scene (fxmlMenu);
