@@ -1,6 +1,5 @@
 /* ***************************************************************
 * Autor............: Gustavo Pereira Nunes
-* Matricula........: 202011230
 * Inicio...........: 07/03/2022
 * Ultima alteracao.: 12/03/2022
 * Nome.............: Arvore Genealogica

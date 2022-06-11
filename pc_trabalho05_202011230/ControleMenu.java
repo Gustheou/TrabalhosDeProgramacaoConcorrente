@@ -1,6 +1,5 @@
 /* ***************************************************************
 * Autor............: Gustavo Pereira Nunes
-* Matricula........: 202011230
 * Inicio...........: 13/04/2022
 * Ultima alteracao.: 22/04/2022
 * Nome.............: ControleMenu

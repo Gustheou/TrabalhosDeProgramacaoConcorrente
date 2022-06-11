@@ -1,6 +1,5 @@
 /* ***************************************************************
 * Autor............: Gustavo Pereira Nunes
-* Matricula........: 202011230
 * Inicio...........: 04/01/2021
 * Ultima alteracao.: 03/02/2021
 * Nome.............: Portal do Aluno

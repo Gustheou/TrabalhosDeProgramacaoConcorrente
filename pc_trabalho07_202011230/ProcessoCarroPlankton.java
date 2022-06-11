@@ -1,6 +1,5 @@
 /* ***************************************************************
 * Autor............: Gustavo Pereira Nunes
-* Matricula........: 202011230
 * Inicio...........: 18/05/2022
 * Ultima alteracao.: 22/05/2022
 * Nome.............: ProcessoCarroPlankton

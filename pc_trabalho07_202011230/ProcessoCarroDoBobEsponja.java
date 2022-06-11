@@ -1,6 +1,5 @@
 /* ***************************************************************
 * Autor............: Gustavo Pereira Nunes
-* Matricula........: 202011230
 * Inicio...........: 17/05/2022
 * Ultima alteracao.: 22/05/2022
 * Nome.............: ProcessoCarroDoBobEsponja
